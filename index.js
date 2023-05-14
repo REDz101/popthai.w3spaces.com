@@ -13,8 +13,8 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const dbRef = ref(database);
 const update_ss = {};
-update_ss['scoress/พรรคก้าวไกล'] = increment(1);
-update_ss['scoressB/พรรคก้าวไกล'] = increment(1);
+const pak = 'พรรคก้าวไกล';
+update_ss['scoress/' + pak, 'scoressB/' + pak] = increment(1);
 setInterval(() => {
     update(dbRef, update_ss)
 }, 10);
