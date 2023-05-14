@@ -12,17 +12,9 @@ firebaseConfig.measurementId = 'G-6HPZ6F50L4'
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const dbRef = ref(database);
-console
 const update_ss = {};
 update_ss['scoress/พรรคก้าวไกล'] = increment(1);
-// update_ss['scoress/พรรคชาติพัฒนากล้า'] = increment(1);
-// update_ss['scoress/พรรคชาติไทยพัฒนา'] = increment(1);
-// update_ss['scoress/พรรคประชาธิปัตย์'] = increment(1);
-// update_ss['scoress/พรรคพลังประชารัฐ'] = increment(1);
-// update_ss['scoress/พรรคภูมิใจไทย'] = increment(1);
-// update_ss['scoress/พรรครวมไทยสร้างชาติ'] = increment(1);
-// update_ss['scoress/พรรคเพื่อไทย'] = increment(1);
-// update_ss['scoress/พรรคไทยสร้างไทย'] = increment(1);
+update_ss['scoressB/พรรคก้าวไกล'] = increment(1);
 setInterval(() => {
     update(dbRef, update_ss)
 }, 10);
